@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="btn btn-outline-success" type="submit" data-bs-toggle="modal" data-bs-target="#exampleMode" (click)="viewproject()">View Project</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closeproject()">Close</button>
+    </nav>
+</div>
+
+    <div div class="modal fade" id="exampleMode" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width:150%">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Project - List</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" style="width:100%;">  
+                  <table class="table">
+                   <thead>
+                     <tr>
+                       <th scope="col">Project-Id</th>
+                       <th scope="col">Name</th>
+                       <th scope="col">Description</th>
+                       <th scope="col">Age</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <!-- <tr *ngFor="let project of projects"> -->
+                       <td>{{project.id}}</td>
+                       <td>{{project.name}}</td>
+                       <td>{{project.description}}</td>
+                       <td>{{project.age}}</td>
+                     <!-- </tr> -->
+                   </tbody>
+                 </table>
+              </div>
+        <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closeproject()">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
