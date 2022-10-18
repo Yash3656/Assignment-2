@@ -1,4 +1,4 @@
-<h1>Hello Everyone</h1>
+<!-- <h1 style="text-align: center;">Hello Everyone</h1> -->
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
@@ -19,8 +19,10 @@
         <div class="modal-header">
             <div class="modal-footer">
                 <!-- <button type="submit" data-bs-toggle="modal" class="btn btn-outline-success" data-bs-target="#exampleModalll">Add Project</button> -->
-                <a  routerLink="/crud" routerLinkActive="active"> Add Project </a>
-                <a  routerLink="/see-crud" routerLinkActive="active">See Project</a>
+                <!-- <a  routerLink="/crud" routerLinkActive="active"> Add Project </a>
+                <a  routerLink="/see-crud" routerLinkActive="active">See Project</a> -->
+                <button class="btn btn-outline-success" type="submit" (click)="btnClick_add()">Add Project</button>
+                <button class="btn btn-outline-success" type="submit" (click)="btnClick_see()">See Project</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>

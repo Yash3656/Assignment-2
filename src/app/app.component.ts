@@ -1,6 +1,7 @@
 import { CrudserviceService } from './crudservice.service';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
   project: any;
   title: any;
 
-  constructor(private formBuilder : FormBuilder, private crudService : CrudserviceService){
+  constructor(private router : Router ,private formBuilder : FormBuilder, private crudService : CrudserviceService){
 
   }
   ngOninit():void{
@@ -31,11 +32,19 @@ export class AppComponent {
       description : [''],
       age: [''],
     };
-  
-  }
+};
 
+btnClick_add(){
+  this.router.navigateByUrl('/crud');
+  window.location.href="/crud";
+}
 
-  getAllProject(){
+btnClick_see(){
+  this.router.navigateByUrl('/see-crud');
+  window.location.href="/see-crud";
+}
+
+getAllProject(){
     this.crudService.getProjects().subscribe(res=>{
       this.projects = res;
   },err=>{
